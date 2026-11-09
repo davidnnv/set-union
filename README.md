@@ -46,3 +46,7 @@ npm run build    # продукција → dist/
 ## Мапа
 Секцијата „Најдете нè“ (на почетната и на контакт страницата) вградува Google Maps според адресата, па пинот секогаш е на точната зграда, без API клуч.
 Има и копчиња за насоки преку Google Maps, Waze и Apple Maps. Со `VITE_MAP_EMBED=off` наместо мапата се прикажува илустрација.
+
+## Објавување (GitHub Pages)
+Сајтот автоматски се објавува на **https://davidnnv.github.io/set-union/** при секој push на `main`
+(`.github/workflows/deploy.yml`). Еднаш треба да се вклучи: Settings → Pages → Source: **GitHub Actions**.
