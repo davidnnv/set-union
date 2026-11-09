@@ -1,0 +1,407 @@
+// All site copy lives here, in Macedonian (mk) and English (en).
+// Edit text in one place; components only render it.
+
+export const COMPANY = {
+  name: 'SET-UNION DOOEL',
+  nameMk: 'СЕТ-УНИОН ДООЕЛ',
+  founded: 1991,
+  exclusiveSince: 2003,
+  email: 'info@set-union.com',
+  phones: [
+    { display: '+389 2 3086 401', tel: '+38923086401', noteKey: 'telFax' },
+    { display: '+389 75 408 574', tel: '+38975408574' },
+    { display: '+389 70 774 886', tel: '+38970774886' },
+  ],
+  locations: [
+    { key: 'office', addrKey: 'officeAddr', tone: 'magenta', query: 'Pop Bogomil 10, 1000 Skopje, North Macedonia' },
+    { key: 'warehouse', addrKey: 'warehouseAddr', tone: 'cyan', query: 'Prizrenska 40A, 1000 Skopje, North Macedonia' },
+  ],
+  partners: [
+    { name: 'Zvezda-Helios', url: 'https://www.zvezda-helios.rs' },
+    { name: 'Torda-Zvezda', url: 'https://www.torda-zvezda.rs' },
+  ],
+};
+
+// Photos live in public/images/. factory.jpg comes from Unsplash (`npm run images`); the rest were supplied by the client.
+// If a file is missing, the page falls back to the colour plate automatically.
+export const PHOTOS = {
+  fanDeck: { src: 'images/fan-deck.jpg' },
+  factory: { src: 'images/factory.jpg', credit: 'Ant Rozetsky' },
+};
+
+// Swatches shown in the hero fan deck. Hex values are screen approximations of RAL shades.
+export const RAL_SWATCHES = [
+  { code: 'RAL 9005', hex: '#0E0E10', mk: 'Длабоко црна', en: 'Jet black' },
+  { code: 'RAL 7016', hex: '#293133', mk: 'Антрацит сива', en: 'Anthracite grey' },
+  { code: 'RAL 5015', hex: '#2271B3', mk: 'Небесно сина', en: 'Sky blue' },
+  { code: 'RAL 4005', hex: '#6C4675', mk: 'Сино-виолетова', en: 'Blue lilac' },
+  { code: 'RAL 3020', hex: '#CC0605', mk: 'Сообраќајна црвена', en: 'Traffic red' },
+  { code: 'RAL 2004', hex: '#F44611', mk: 'Чиста портокалова', en: 'Pure orange' },
+  { code: 'RAL 1023', hex: '#FAD201', mk: 'Сообраќајна жолта', en: 'Traffic yellow' },
+  { code: 'RAL 6018', hex: '#57A639', mk: 'Жолто-зелена', en: 'Yellow green' },
+];
+
+// Product lines. `slug` is the URL hash, `tone` maps to a CSS token.
+export const PRODUCTS = [
+  {
+    slug: 'flexo',
+    tone: 'cyan',
+    code: 'C',
+    image: { src: 'images/flexo.jpg' },
+    mk: {
+      title: 'Флексографски бои',
+      short: 'Флексо бои',
+      variants: ['На солвентна база', 'Водорастворни'],
+      teaser:
+        'Бои за печатење на флексибилна амбалажа — полиетилен, полипропилен, полиамид, картон и хартиена еко-амбалажа.',
+      intro:
+        'Бои за флексо и длабок (бакро) печат на флексибилна амбалажа, картон и натрон амбалажа. Нудиме два типа: флексо бои на база на органски растворувачи и водорастворни флексо бои.',
+      body: [
+        'На залиха секогаш имаме CMYK бои и нијанси според PANTONE картата. Примаме нарачки за нестандардни нијанси и за различни подлоги за печатење. Ваквите бои најчесто се брендираат според купувачот, за нијансата да остане иста во секоја наредна серија.',
+        'Покрај боите, постојано располагаме со разредувачи, успорувачи, забрзувачи, средства за чистење, фирнис, ракели и останат придружен материјал за флексо печат.',
+      ],
+      specs: [
+        { label: 'Тип', items: ['Солвентни', 'Водорастворни'] },
+        { label: 'Подлоги', items: ['Полиетилен (PE)', 'Полипропилен (PP)', 'Полиамид (PA)', 'Картон', 'Натрон', 'Хартиена еко-амбалажа'] },
+        { label: 'Систем на бои', items: ['CMYK', 'PANTONE', 'Нестандардни нијанси'] },
+        { label: 'Придружен материјал', items: ['Разредувачи', 'Успорувачи', 'Забрзувачи', 'Средства за чистење', 'Фирнис', 'Ракели'] },
+      ],
+    },
+    en: {
+      title: 'Flexographic inks',
+      short: 'Flexo inks',
+      variants: ['Solvent-based', 'Water-based'],
+      teaser:
+        'Inks for printing flexible packaging — polyethylene, polypropylene, polyamide, cardboard and paper eco-packaging.',
+      intro:
+        'Inks for flexographic and gravure printing on flexible packaging, cardboard and kraft packaging. We offer two types: solvent-based flexo inks and water-based flexo inks.',
+      body: [
+        'CMYK process inks and PANTONE shades are always in stock. We take orders for custom shades and for different printing substrates. These are usually branded to the customer, so the shade stays identical in every following batch.',
+        'Alongside the inks we keep thinners, retarders, accelerators, cleaners, overprint varnish, doctor blades and other consumables for flexo printing.',
+      ],
+      specs: [
+        { label: 'Type', items: ['Solvent-based', 'Water-based'] },
+        { label: 'Substrates', items: ['Polyethylene (PE)', 'Polypropylene (PP)', 'Polyamide (PA)', 'Cardboard', 'Kraft', 'Paper eco-packaging'] },
+        { label: 'Colour system', items: ['CMYK', 'PANTONE', 'Custom shades'] },
+        { label: 'Consumables', items: ['Thinners', 'Retarders', 'Accelerators', 'Cleaners', 'Overprint varnish', 'Doctor blades'] },
+      ],
+    },
+  },
+  {
+    slug: 'powder',
+    tone: 'magenta',
+    code: 'M',
+    image: { src: 'images/powder.jpg' },
+    mk: {
+      title: 'Лакови во прав',
+      short: 'Лакови во прав',
+      variants: ['PU', 'PE', 'EP', 'E'],
+      teaser:
+        'Прашкасти бои за долготрајна заштита на метал, нанесени електростатски и печени на точно определена температура.',
+      intro:
+        'Прашкасти бои за долготрајна заштита на метал. Се нанесуваат во електростатска средина, при што металот и бојата се спротивно поларизирани. Потоа предметот се пече на строго определена температура и времетраење.',
+      body: [
+        'Сите комбинации на состав и изглед се можни — на пример EP мат, PE структурен или PE полумат.',
+        'Нијансите најчесто се избираат од RAL картата, а изработуваме и специјални нијанси по барање на купувачот.',
+      ],
+      process: ['Електростатско нанесување', 'Печење на определена температура', 'Траен, отпорен премаз'],
+      specs: [
+        { label: 'Состав', items: ['PU — полиуретански', 'PE — полиестерски', 'EP — епокси-полиестерски', 'E — епоксидни'] },
+        { label: 'Изглед', items: ['Сјаен', 'Мат', 'Полумат', 'Структурен', 'Структурен мат'] },
+        { label: 'Нијанси', items: ['RAL карта', 'Специјални нијанси по барање'] },
+      ],
+    },
+    en: {
+      title: 'Powder coatings',
+      short: 'Powder coatings',
+      variants: ['PU', 'PE', 'EP', 'E'],
+      teaser:
+        'Powder paints for long-lasting protection of metal, applied electrostatically and cured at a precise temperature.',
+      intro:
+        'Powder paints for long-lasting protection of metal. They are applied electrostatically, with the metal and the powder oppositely charged. The part is then cured at a strictly defined temperature and time.',
+      body: [
+        'Any combination of chemistry and finish is possible — for example EP matt, PE textured or PE semi-matt.',
+        'Shades are usually chosen from the RAL chart, and we also produce special shades on request.',
+      ],
+      process: ['Electrostatic application', 'Curing at a set temperature', 'Durable, resistant finish'],
+      specs: [
+        { label: 'Chemistry', items: ['PU — polyurethane', 'PE — polyester', 'EP — epoxy-polyester', 'E — epoxy'] },
+        { label: 'Finish', items: ['Gloss', 'Matt', 'Semi-matt', 'Textured', 'Textured matt'] },
+        { label: 'Shades', items: ['RAL chart', 'Special shades on request'] },
+      ],
+    },
+  },
+  {
+    slug: 'masterbatch',
+    tone: 'yellow',
+    code: 'Y',
+    image: { src: 'images/masterbatch.jpg' },
+    mk: {
+      title: 'Мастербачи',
+      short: 'Мастербачи',
+      variants: ['Plaston PELD', 'PS', 'PP'],
+      teaser:
+        'Пигментни концентрати во форма на полимерни гранули за боење на полимерни маси.',
+      intro:
+        'Мастербачот Plaston е пигментен концентрат за боење на полимерни маси — високо концентрирана пигментна дисперзија во форма на полимерни гранули.',
+      body: [
+        'Составот на гранулите е избалансиран така што е компатибилен со полимерот што се бои. Затоа нудиме повеќе типови мастербачи.',
+        'Нијансите најчесто се избираат од RAL или фабричка карта, а можни се и нестандардни нијанси според потребите на нарачателот.',
+      ],
+      types: [
+        { name: 'Plaston PELD', text: 'На база на полиетилен со ниска густина. За боење на полиолефински маси — PELD, PEHD и PP.' },
+        { name: 'Plaston PS', text: 'На база на кристален полистирен.' },
+        { name: 'Plaston PP', text: 'На база на полипропилен, за нормален и транспарентен полипропилен.' },
+        { name: 'Plaston + адитиви', text: 'Мастербач со вградени адитиви по потреба на нарачателот.' },
+      ],
+      specs: [
+        { label: 'Полимери', items: ['PELD', 'PEHD', 'PP', 'PS'] },
+        { label: 'Нијанси', items: ['RAL карта', 'Фабричка карта', 'Нестандардни по барање'] },
+      ],
+    },
+    en: {
+      title: 'Masterbatches',
+      short: 'Masterbatches',
+      variants: ['Plaston PELD', 'PS', 'PP'],
+      teaser: 'Pigment concentrates in polymer granule form for colouring polymer compounds.',
+      intro:
+        'Plaston masterbatch is a pigment concentrate for colouring polymers — a highly concentrated pigment dispersion in the form of polymer granules.',
+      body: [
+        'The granule composition is balanced to be compatible with the polymer being coloured, which is why we offer several types.',
+        'Shades are usually chosen from the RAL or factory chart, and custom shades are possible to match the customer’s needs.',
+      ],
+      types: [
+        { name: 'Plaston PELD', text: 'Low-density polyethylene carrier. For colouring polyolefins — PELD, PEHD and PP.' },
+        { name: 'Plaston PS', text: 'Crystal polystyrene carrier.' },
+        { name: 'Plaston PP', text: 'Polypropylene carrier, for standard and transparent polypropylene.' },
+        { name: 'Plaston + additives', text: 'Masterbatch with built-in additives to the customer’s specification.' },
+      ],
+      specs: [
+        { label: 'Polymers', items: ['PELD', 'PEHD', 'PP', 'PS'] },
+        { label: 'Shades', items: ['RAL chart', 'Factory chart', 'Custom on request'] },
+      ],
+    },
+  },
+  {
+    slug: 'anticorrosion',
+    tone: 'rust',
+    code: 'K',
+    image: { src: 'images/anticorrosion.jpg' },
+    mk: {
+      title: 'Антикорозивни премази',
+      short: 'Антикорозивни премази',
+      variants: ['Полиуретански', 'Алкидни', 'Нитро', 'Маслени'],
+      teaser:
+        'Заштита од корозија за метални конструкции, цевководи, бетонски подлоги и базени.',
+      intro:
+        'Премази за заштита од корозија што го продолжуваат векот на употреба на метални конструкции и предмети, како и системи за заштита на бетон.',
+      body: [
+        'Поради разноврсната употреба, овие премази ги испорачуваме исклучиво според потребите и условите на работа на купувачот.',
+        'Нијансите најчесто се избираат од RAL картата, а можна е и изработка на нестандардни нијанси.',
+      ],
+      applications: [
+        'Цевководи', 'Индустриска опрема', 'Градежна механизација', 'Земјоделска механизација', 'Мостови',
+        'Далноводи', 'Трафостаници', 'Цистерни за нафтени деривати', 'Градежни контејнери',
+        'Индустриски постројки', 'Товарни и патнички возила', 'Бетон и бетонски подови', 'Базени',
+      ],
+      specs: [
+        { label: 'Тип', items: ['Полиуретански', 'Алкидни', 'Нитро', 'Маслени'] },
+        { label: 'Нијанси', items: ['RAL карта', 'Нестандардни по барање'] },
+      ],
+    },
+    en: {
+      title: 'Anti-corrosion coatings',
+      short: 'Anti-corrosion',
+      variants: ['Polyurethane', 'Alkyd', 'Nitro', 'Oil-based'],
+      teaser: 'Corrosion protection for steel structures, pipelines, concrete surfaces and pools.',
+      intro:
+        'Coatings that protect against corrosion and extend the service life of metal structures and parts, plus protection systems for concrete.',
+      body: [
+        'Because their uses vary so widely, these coatings are supplied strictly to the customer’s requirements and operating conditions.',
+        'Shades are usually chosen from the RAL chart, and custom shades can be produced.',
+      ],
+      applications: [
+        'Pipelines', 'Industrial equipment', 'Construction machinery', 'Agricultural machinery', 'Bridges',
+        'Power lines', 'Substations', 'Fuel tanks', 'Site containers',
+        'Industrial plants', 'Trucks and passenger vehicles', 'Concrete and concrete floors', 'Swimming pools',
+      ],
+      specs: [
+        { label: 'Type', items: ['Polyurethane', 'Alkyd', 'Nitro', 'Oil-based'] },
+        { label: 'Shades', items: ['RAL chart', 'Custom on request'] },
+      ],
+    },
+  },
+];
+
+export const UI = {
+  mk: {
+    nav: { home: 'Дома', products: 'Производи', about: 'За нас', contact: 'Контакт' },
+    langSwitch: 'EN',
+    langSwitchLabel: 'Switch to English',
+    menu: 'Мени',
+    close: 'Затвори',
+    tagline: 'Live in Color',
+    heroTitle: ['Бои и лакови', 'за индустријата'],
+    heroLead:
+      'Увозник и ексклузивен застапник за индустриските програми на Zvezda-Helios и Torda-Zvezda. Флексо бои, лакови во прав, мастербачи и антикорозивни премази — на залиха во Скопје.',
+    ctaProducts: 'Погледни производи',
+    ctaQuote: 'Побарај понуда',
+    fanHint: 'Изберете нијанса',
+    linesEyebrow: 'Четири производни линии',
+    linesTitle: 'Од амбалажа до челични конструкции',
+    more: 'Детали',
+    facts: [
+      { value: '1991', label: 'Основана во Скопје' },
+      { value: '2003', label: 'Ексклузивен застапник за Zvezda-Helios и Torda-Zvezda' },
+      { value: 'RAL · PANTONE', label: 'Стандардни и нестандардни нијанси' },
+    ],
+    aboutEyebrow: 'За нас',
+    aboutTitle: 'Над три децении бои за македонската индустрија',
+    aboutBody: [
+      'СЕТ-УНИОН ДООЕЛ од Скопје е основана во 1991 година, со примарна дејност увоз на бои и лакови за индустриска намена.',
+      'Од 2003 година сме ексклузивен застапник за индустриските програми на производителите ZVEZDA-HELIOS и TORDA-ZVEZDA, двете со седиште во Горњи Милановац, Србија.',
+      'Го снабдуваме македонскиот пазар со флексографски бои и придружен материјал, прашкасти бои за електростатско боење, антикорозивни бои и мастербачи.',
+    ],
+    partnersTitle: 'Партнери',
+    partnersNote: 'Горњи Милановац, Србија',
+    otherTitle: 'Дополнителни дејности',
+    other: ['Позамантерија', 'Мултимедијални решенија'],
+    quality: 'Сите производи ги исполнуваат највисоките стандарди за квалитет и екологија.',
+    variants: 'Варијанти',
+    specs: 'Спецификации',
+    types: 'Типови',
+    applications: 'Примена',
+    process: 'Постапка',
+    otherLines: 'Други производни линии',
+    contactEyebrow: 'Контакт',
+    contactTitle: 'Побарајте понуда или нијанса',
+    contactLead: 'Напишете ни кој производ, нијанса и количина ви се потребни. Одговараме во текот на работниот ден.',
+    office: 'Канцеларија',
+    warehouse: 'Магацин',
+    officeAddr: 'Поп Богомил 10, 1000 Скопје',
+    warehouseAddr: 'Призренска 40-А, 1000 Скопје',
+    telFax: 'тел/факс',
+    openMap: 'Отвори на мапа',
+    copy: 'Копирај',
+    copied: 'Копирано',
+    form: {
+      name: 'Име и презиме',
+      email: 'Е-пошта',
+      phone: 'Телефон',
+      product: 'Производ',
+      productAny: 'Општо прашање',
+      shade: 'Нијанса (на пр. RAL 5015)',
+      message: 'Порака',
+      required: 'задолжително',
+      submit: 'Подготви барање',
+      sending: 'Се испраќа…',
+      errName: 'Внесете име и презиме.',
+      errEmail: 'Внесете важечка е-пошта, на пр. ime@firma.mk.',
+      errMessage: 'Напишете порака.',
+      sent: 'Барањето е испратено. Ќе ве контактираме наскоро.',
+      ready: 'Барањето е подготвено',
+      readyHelp: 'Испратете го од вашата е-пошта на info@set-union.com, или копирајте го текстот.',
+      openEmail: 'Отвори во е-пошта',
+      copyText: 'Копирај текст',
+      edit: 'Измени',
+      failed: 'Испраќањето не успеа. Испратете ја пораката директно на info@set-union.com.',
+    },
+    footerRights: 'Сите права задржани.',
+    footerProducts: 'Производи',
+    footerCompany: 'Компанија',
+    swatchNote: 'Боите на екран се приближни. За точна нијанса побарајте мостра.',
+    photo: 'Фото',
+    mapEyebrow: 'Локација',
+    mapTitle: 'Најдете нè во Скопје',
+    mapLead: 'Канцеларијата и магацинот се во Скопје. Изберете локација и отворете насоки во апликацијата што ја користите.',
+    directions: 'Насоки со',
+    copyAddress: 'Копирај адреса',
+    mapNote: 'Интерактивната мапа се вчитува на објавениот сајт.',
+    photosCredit: 'Дел од фотографиите: Unsplash',
+  },
+  en: {
+    nav: { home: 'Home', products: 'Products', about: 'About', contact: 'Contact' },
+    langSwitch: 'МК',
+    langSwitchLabel: 'Префрли на македонски',
+    menu: 'Menu',
+    close: 'Close',
+    tagline: 'Live in Color',
+    heroTitle: ['Industrial inks', 'and coatings'],
+    heroLead:
+      'Importer and exclusive representative for the industrial ranges of Zvezda-Helios and Torda-Zvezda. Flexo inks, powder coatings, masterbatches and anti-corrosion coatings — in stock in Skopje.',
+    ctaProducts: 'View products',
+    ctaQuote: 'Request a quote',
+    fanHint: 'Pick a shade',
+    linesEyebrow: 'Four product lines',
+    linesTitle: 'From packaging to steel structures',
+    more: 'Details',
+    facts: [
+      { value: '1991', label: 'Founded in Skopje' },
+      { value: '2003', label: 'Exclusive representative of Zvezda-Helios and Torda-Zvezda' },
+      { value: 'RAL · PANTONE', label: 'Standard and custom shades' },
+    ],
+    aboutEyebrow: 'About',
+    aboutTitle: 'Over three decades of colour for North Macedonian industry',
+    aboutBody: [
+      'SET-UNION DOOEL, based in Skopje, was founded in 1991. Its core business is importing inks and coatings for industrial use.',
+      'Since 2003 we have been the exclusive representative for the industrial ranges of ZVEZDA-HELIOS and TORDA-ZVEZDA, both headquartered in Gornji Milanovac, Serbia.',
+      'We supply the North Macedonian market with flexographic inks and consumables, powder coatings for electrostatic application, anti-corrosion paints and masterbatches.',
+    ],
+    partnersTitle: 'Partners',
+    partnersNote: 'Gornji Milanovac, Serbia',
+    otherTitle: 'Other activities',
+    other: ['Passementerie', 'Multimedia solutions'],
+    quality: 'All products meet the highest standards for quality and environmental protection.',
+    variants: 'Variants',
+    specs: 'Specifications',
+    types: 'Types',
+    applications: 'Applications',
+    process: 'Process',
+    otherLines: 'Other product lines',
+    contactEyebrow: 'Contact',
+    contactTitle: 'Request a quote or a shade',
+    contactLead: 'Tell us which product, shade and quantity you need. We reply within the working day.',
+    office: 'Office',
+    warehouse: 'Warehouse',
+    officeAddr: 'Pop Bogomil 10, 1000 Skopje',
+    warehouseAddr: 'Prizrenska 40-A, 1000 Skopje',
+    telFax: 'tel/fax',
+    openMap: 'Open in maps',
+    copy: 'Copy',
+    copied: 'Copied',
+    form: {
+      name: 'Full name',
+      email: 'Email',
+      phone: 'Phone',
+      product: 'Product',
+      productAny: 'General enquiry',
+      shade: 'Shade (e.g. RAL 5015)',
+      message: 'Message',
+      required: 'required',
+      submit: 'Prepare request',
+      sending: 'Sending…',
+      errName: 'Enter your full name.',
+      errEmail: 'Enter a valid email, e.g. name@company.com.',
+      errMessage: 'Write a message.',
+      sent: 'Your request was sent. We will contact you shortly.',
+      ready: 'Your request is ready',
+      readyHelp: 'Send it from your email to info@set-union.com, or copy the text.',
+      openEmail: 'Open in email',
+      copyText: 'Copy text',
+      edit: 'Edit',
+      failed: 'Sending failed. Please email your message directly to info@set-union.com.',
+    },
+    footerRights: 'All rights reserved.',
+    footerProducts: 'Products',
+    footerCompany: 'Company',
+    swatchNote: 'On-screen colours are approximate. Ask for a sample to match a shade exactly.',
+    photo: 'Photo',
+    mapEyebrow: 'Location',
+    mapTitle: 'Find us in Skopje',
+    mapLead: 'Our office and warehouse are both in Skopje. Pick a location and open directions in the app you use.',
+    directions: 'Directions with',
+    copyAddress: 'Copy address',
+    mapNote: 'The interactive map loads on the published site.',
+    photosCredit: 'Some photos: Unsplash',
+  },
+};
